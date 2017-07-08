@@ -9,6 +9,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class NewAccountComponent {
   constructor(private logging: LoggingService, private dataserviceService: DataserviceService) {
+    this.dataserviceService.statusUpdated.subscribe(data => alert(data))
   }
   onCreateAccount(accountName: string, accountStatus: string) {
     this.dataserviceService.onAccountAdded({ name: accountName, status: accountStatus })
