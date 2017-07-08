@@ -1,5 +1,5 @@
 import { LoggingService } from './../services/logging.service';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-account',
