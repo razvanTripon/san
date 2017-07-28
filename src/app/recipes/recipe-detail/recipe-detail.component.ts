@@ -11,11 +11,11 @@ import { Recipe } from '../recipe.model';
 export class RecipeDetailComponent implements OnInit {
   @Input() recipe: Recipe;
 
-  constructor(private recipeService: RecipeService) {
-    this.recipeService.evenDetail.subscribe(reteta => this.recipe = reteta)
-  }
+  constructor(private recipeService: RecipeService) { }
 
   ngOnInit() {
   }
-
+  onAddtoShoppingList() {
+    this.recipeService.addIngredientsTOshopingList(this.recipe.ingrediens);
+  }
 }
