@@ -27,7 +27,7 @@ export class OnReturnDirective {
                         control = control.nextElementSibling;
                     }
                 } else {
- //                   console.log('gata ba');
+ //                   console.log('gata ba nu a mai gasit elemente pe care sa calce');
                     return;
                 }
             }
